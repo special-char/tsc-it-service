@@ -4,9 +4,18 @@ const { fontFamily } = require("tailwindcss/defaultTheme");
 module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   theme: {
+    colors: {
+      black: "#000",
+      white: "#ffffff",
+      gray100: "#f1f1f1",
+      gainsboro: "#e2e2e2",
+      lightGray: "#d3d3d3",
+      dimGray: "#747474",
+      gray: "#8f8f8f",
+    },
     fontSize: {
-      xs: ["14px", "1.5em"],
-      sm: ["15px", "1.6em"],
+      xs: ["0.75em", "1.125em"],
+      sm: ["0.875em", "1.25em"],
       base: ["16px", "1.44em"],
       lg: ["18px", "1.667em"],
       xl: ["20px", "1.5em"],

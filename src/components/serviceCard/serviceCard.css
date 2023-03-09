@@ -1,0 +1,3 @@
+.serviceCard {
+  @apply bg-gainsboro aspect-square w-full relative;
+}

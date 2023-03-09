@@ -3,10 +3,42 @@
 @tailwind utilities;
 
 @layer base {
-  h1 {
+  body {
+    @apply font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold font-black;
   }
 
   h2 {
-    @apply font-sans text-4xl md:text-6xl lg:text-8xl;
+    @apply text-7xl sm:text-8xl lg:text-9xl;
+  }
+
+  h6 {
+    @apply text-xs;
+  }
+
+  p {
+  }
+
+  p.small {
+  }
+
+  p.large {
+  }
+
+  a {
+  }
+
+  a.small {
+  }
+
+  a.large {
   }
 }
