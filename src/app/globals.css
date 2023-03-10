@@ -42,3 +42,8 @@
   a.large {
   }
 }
+
+@layer components {
+  .btn {
+  }
+}
