@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  gap: 30px;
+  margin-left: 60px;
+  margin-top: 50px;
+}
+
+.person {
+  overflow: hidden;
+  aspect-ratio: 1;
+  width: 600px;
+}
+
+.hedding {
+  max-width: 1200px;
+  margin-top: 10px;
+  margin-left: 60px;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
