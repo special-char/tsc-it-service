@@ -6,15 +6,17 @@ import ServiceCard from "@/components/ServiceCard/ServiceCard";
 import About from "@/containers/about/About";
 import Team from "@/containers/team/Team";
 import TeamCard from "@/components/TeamCard/Team";
+import FAQ from "@/containers/faq/FAQ";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
-      <About />
+      {/* <About />
       <Team />
-      <TeamCard />
+      <TeamCard /> */}
+      <FAQ />
     </>
   );
 }
