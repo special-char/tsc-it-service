@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <div className="main_div flex justify-center">
-      <div className="container flex flex-row">
+      <div className="container flex flex-row px-[50px]">
         <div className="flex-1">
           <img
             className="aspect-auto w-[500px]"
