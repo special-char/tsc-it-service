@@ -45,5 +45,6 @@
 
 @layer components {
   .btn {
+    @apply text-dimGray py-4 px-6 rounded-md border-2 bg-lightGray border-lightGray;
   }
 }
