@@ -1,19 +1,18 @@
-import Button from "@/components/Button/Button";
 import React from "react";
 
 const Hero = () => {
   return (
-    <div className="hero grid min-h-fit content-center items-center">
+    <div className="hero">
       <div className="hero_wrapper mt-10 flex relative px-[4%] justify-center ">
-        <div className="container flex flex-1 gap-10 flex-col lg:flex-row mx-auto flex-grow flex-shrink max-w-6xl">
-          <div className="right_content flex flex-[50%] flex-col justify-start relative">
-            <h3 className="text-[160px]">
+        <div className="container flex gap-10 flex-col lg:flex-row lg:flex-nowrap mx-auto max-w-[1200px]">
+          <div className="right_content flex flex-col justify-start relative">
+            <h3 className="text-9xl md:text-[110px]">
               Think. <br /> <span className="text-dimGray">Create.</span> <br />
               Solution.
             </h3>
           </div>
-          <div className="left_content flex flex-[50%] justify-between flex-col">
-            <div className="content relative flex flex-col gap-7 mt-40 overflow-hidden items-start justify-end">
+          <div className="left_content flex justify-between lg:mt-20 flex-col">
+            <div className="content relative flex flex-col flex-wrap gap-7 overflow-hidden items-start justify-end">
               <p className="text-3xl text-dimGray leading-10">
                 We are an award-winning branding and web agency committed to
                 excellence since forever.

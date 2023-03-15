@@ -6,7 +6,18 @@ import Sitemark from "../../../public/icons/sitemark.svg";
 import Pinpoint from "../../../public/icons/pinpoint.svg";
 
 const PageHeader = () => {
-  return <div>PageHeader</div>;
+  return (
+    <div className="pageheader">
+      {/* <div className="pageheader_wrapper">
+      <div className="container">
+        <div className="content flex flex-col">
+          <div className="header"></div>
+          <div className="brands"></div>
+        </div>
+      </div>
+    </div> */}
+    </div>
+  );
 };
 
 export default PageHeader;

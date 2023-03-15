@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import "./style.css";
 import Open from "../../../public/icons/open.svg";
 import Close from "../../../public/icons/close.svg";
 import Location from "../../../public/icons/location.svg";
@@ -18,11 +17,12 @@ const Header = () => {
   return (
     <div className="navigation sticky bg-white z-20 top-0">
       <div className="navigation_wrapper  flex px-[4%] items-center">
-        <div className="container flex flex-row justify-between items-center mx-auto py-10 flex-grow flex-shrink max-w-6xl">
+        <div className="container flex flex-row justify-between items-center mx-auto py-10 flex-grow flex-shrink w-full">
           <a href="#" className="text-7xl">
             TSC
           </a>
           <button
+            className="left-0"
             onClick={() => {
               setIsOpen(!isOpen);
             }}
@@ -44,7 +44,7 @@ const Header = () => {
               </ul>
             </nav>
             <div className="divider w-[98%] h-[1px] mx-auto mt-20 mb-12 bg-lightGray"></div>
-            <div className="links flex flex-row gap-7 justify-between items-center mx-10 flex-[2] ">
+            <div className="links flex flex-row gap-7 justify-between items-center mx-10">
               <div className="icons flex cursor-pointer gap-4">
                 <img
                   className=" w-5"
