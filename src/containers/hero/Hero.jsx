@@ -6,18 +6,18 @@ const Hero = () => {
       <div className="hero_wrapper mt-10 flex relative px-[4%] justify-center ">
         <div className="container flex gap-10 flex-col lg:flex-row lg:flex-nowrap mx-auto max-w-[1200px]">
           <div className="right_content flex flex-col justify-start relative">
-            <h3 className="text-9xl md:text-[110px]">
+            <h3 className="text-9xl md:text-[110px] lg:text-[140px]">
               Think. <br /> <span className="text-dimGray">Create.</span> <br />
               Solution.
             </h3>
           </div>
-          <div className="left_content flex justify-between lg:mt-20 flex-col">
+          <div className="left_content flex justify-between lg:mt-10 xl:mt-16 flex-col">
             <div className="content relative flex flex-col flex-wrap gap-7 overflow-hidden items-start justify-end">
-              <p className="text-3xl text-dimGray leading-10">
+              <p className="text-3xl xl:text-4xl text-dimGray leading-10">
                 We are an award-winning branding and web agency committed to
                 excellence since forever.
               </p>
-              <p className="text-3xl text-dimGray">
+              <p className="text-3xl xl:text-4xl text-dimGray">
                 We set the standard of exceptional design creatively,
                 technically, sustainably, and ethically so that you can make the
                 extraordinary impact impact that you seek.

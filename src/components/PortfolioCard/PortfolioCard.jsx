@@ -1,15 +1,14 @@
 import React from "react";
-import "./style.css";
 
-const PortfolioCard = ({ img, text }) => {
+const PortfolioCard = ({ src, title, paragraph }) => {
   return (
-    <div className="maindiv">
-      <img className=" img" src={img} />
-      <p className="text">{text}</p>
-      <p className="lorem">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </p>
-      <a href="" className="learn">
+    <div className="h-auto flex flex-col gap-10 md:gap-7 lg:gap-4 xl:gap-10 p-7 bg-lightGray">
+      <div className="image">
+        <img className="img aspect-square items-start w-20" src={src} />
+      </div>
+      <h3 className="text-xl">{title}</h3>
+      <p className="text-lg">{paragraph}</p>
+      <a href="" className="text-lg">
         Learn More
       </a>
     </div>

@@ -14,8 +14,8 @@ const Banner = () => {
                 alt=""
               />
             </div>
-            <div className="paragraph flex flex-1 flex-col gap-20 self-center">
-              <p className="text-xl text-gray text-start">
+            <div className="paragraph flex flex-1 py-8 lg:py-28 flex-col gap-20 self-center">
+              <p className="text-2xl text-gray text-start">
                 We bring together innovative designers, pixel perfect developers
                 and data driven strategy to create a boutique experience at
                 enterprise scale.
