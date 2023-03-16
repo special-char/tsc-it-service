@@ -1,5 +1,4 @@
 import React from "react";
-import "./styles.css";
 import Iceberg from "../../../public/icons/iceberg.svg";
 import Vision from "../../../public/icons/vision.svg";
 import Rise from "../../../public/icons/rise.svg";

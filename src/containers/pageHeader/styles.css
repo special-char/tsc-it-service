@@ -1,9 +1,0 @@
-.brands{
-    display: grid;
-    align-items: center;
-    grid-auto-columns: 1fr;
-    grid-column-gap: 16px;
-    grid-row-gap: 10px;
-    grid-template-columns: 0.7fr 1fr;
-    grid-template-rows: auto;
-}

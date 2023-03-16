@@ -5,10 +5,10 @@ import Close from "../../../public/icons/close.svg";
 import Location from "../../../public/icons/location.svg";
 
 const navItems = [
-  { name: "HOME", href: "#" },
-  { name: "ABOUT", href: "#" },
-  { name: "NEWS", href: "#" },
-  { name: "CONTACT", href: "#" },
+  { name: "HOME", href: "/" },
+  { name: "ABOUT", href: "/about" },
+  { name: "NEWS", href: "/blogs" },
+  { name: "CONTACT", href: "/contact" },
 ];
 
 const Header = () => {
