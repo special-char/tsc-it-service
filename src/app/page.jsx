@@ -4,6 +4,14 @@ import Hero from "@/containers/hero/Hero";
 import Footer from "@/containers/footer/Footer";
 import PageHeader from "@/containers/pageHeader/PageHeader";
 import Banner from "@/containers/banner/Banner";
+import styles from "./page.module.css";
+import Test from "@/components/Button";
+import ServiceCard from "@/components/ServiceCard/ServiceCard";
+import TestimonialCard from "@/components/TestimonialCard/TestimonialCard";
+import FunFacts from "@/containers/funFacts/FunFacts";
+import ContactDetails from "@/containers/contactDetails/ContactDetails";
+import ContactCard from "@/components/ContactCard/ContactCard";
+import Location from "@/containers/location/Location";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +25,13 @@ export default function Home() {
       {/* <PageHeader /> */}
       {/* <Testimonial /> */}
       <Footer />
+      {/* <TestimonialCard /> */}
+
+      {/* <PageHeader /> */}
+      {/* <Banner /> */}
+      {/* <FunFacts /> */}
+      {/* <ContactDetails /> */}
+      <Location />
     </>
   );
 }

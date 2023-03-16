@@ -1833,9 +1833,9 @@
   "version" "1.9.0"
 
 "core-js-compat@^3.25.1":
-  "integrity" "sha512-ScMn3uZNAFhK2DGoEfErguoiAHhV2Ju+oJo/jK08p7B3f3UhocUrCCkTvnZaiS+edl5nlIoiBXKcwMc6elv4KQ=="
-  "resolved" "https://registry.npmjs.org/core-js-compat/-/core-js-compat-3.29.0.tgz"
-  "version" "3.29.0"
+  "integrity" "sha512-QmchCua884D8wWskMX8tW5ydINzd8oSJVx38lx/pVkFGqztxt73GYre3pm/hyYq8bPf+MW5In4I/uRShFDsbrA=="
+  "resolved" "https://registry.npmjs.org/core-js-compat/-/core-js-compat-3.29.1.tgz"
+  "version" "3.29.1"
   dependencies:
     "browserslist" "^4.21.5"
 
@@ -4054,9 +4054,9 @@
   "version" "3.2.0"
 
 "regexpu-core@^5.3.1":
-  "integrity" "sha512-nCOzW2V/X15XpLsK2rlgdwrysrBq+AauCn+omItIz4R1pIcmeot5zvjdmOBRLzEH/CkC6IxMJVmxDe3QcMuNVQ=="
-  "resolved" "https://registry.npmjs.org/regexpu-core/-/regexpu-core-5.3.1.tgz"
-  "version" "5.3.1"
+  "integrity" "sha512-RAM5FlZz+Lhmo7db9L298p2vHP5ZywrVXmVXpmAD9GuL5MPH6t9ROw1iA/wfHkQ76Qe7AaPF0nGuim96/IrQMQ=="
+  "resolved" "https://registry.npmjs.org/regexpu-core/-/regexpu-core-5.3.2.tgz"
+  "version" "5.3.2"
   dependencies:
     "@babel/regjsgen" "^0.8.0"
     "regenerate" "^1.4.2"
