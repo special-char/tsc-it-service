@@ -1,5 +1,4 @@
 import React from "react";
-import "./style.css";
 import Review from "../Review/Review";
 import Author from "../Author/Author";
 

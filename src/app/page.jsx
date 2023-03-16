@@ -5,7 +5,6 @@ import Footer from "@/containers/footer/Footer";
 import PageHeader from "@/containers/pageHeader/PageHeader";
 import Banner from "@/containers/banner/Banner";
 import styles from "./page.module.css";
-import Test from "@/components/Button";
 import ServiceCard from "@/components/ServiceCard/ServiceCard";
 import About from "@/containers/about/About";
 import Team from "@/containers/team/Team";
