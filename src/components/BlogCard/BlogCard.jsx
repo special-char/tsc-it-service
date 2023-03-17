@@ -9,7 +9,7 @@ const BlogCard = ({ tag, date, text, src }) => {
       </div>
       <div className="BlogContent flex flex-col gap-7 px-4 py-8">
         <div className="news flex flex-row gap-5 items-center">
-          <p className="p-2 border-2 border-lightGray rounded text-base">
+          <p className="p-2 border-2 border-lightGray rounded text-base text-dimGray">
             {tag}
           </p>
           <p className="mb-0 text-lg">{date}</p>

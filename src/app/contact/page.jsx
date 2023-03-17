@@ -1,5 +1,13 @@
+import ContactDetails from "@/containers/contactDetails/ContactDetails";
+import FAQ from "@/containers/faq/FAQ";
+
 const Contact = () => {
-  return <div>Contact Page</div>;
+  return (
+    <div>
+      <ContactDetails />
+      <FAQ />
+    </div>
+  );
 };
 
 export default Contact;
