@@ -37,17 +37,15 @@ const accordian = [
 const FAQ = () => {
   return (
     <div className="faq">
-      <div className="faq_wrapper mt-10 flex relative px-[5%] justify-center">
-        <div className="container relative z-[1] mx-auto flex flex-col my-7 gap-10 flex-wrap flex-shrink flex-grow basis-[0%] max-w-[1200]">
-          <div className="items-center">
-            <h2 className="flex justify-center">Frequently asked</h2>
-            <h2 className="flex justify-center">questions</h2>
-          </div>
-          <div className="flex flex-col items-start">
-            {accordian.map((item) => (
-              <Accordian key={item.id} {...item} />
-            ))}
-          </div>
+      <div className="container relative z-[1] mx-auto max-w-6xl flex flex-col my-7 gap-10 flex-wrap flex-shrink flex-grow basis-[0%] w-full">
+        <div className="items-center">
+          <h2 className="flex justify-center">Frequently asked</h2>
+          <h2 className="flex justify-center">questions</h2>
+        </div>
+        <div className="flex flex-col items-start">
+          {accordian.map((item) => (
+            <Accordian key={item.id} {...item} />
+          ))}
         </div>
       </div>
     </div>

@@ -31,16 +31,14 @@ const team = [
 const Team = () => {
   return (
     <div className="team">
-      <div className="team_wrapper mt-10 flex relative px-[5%] justify-center">
-        <div className="container relative z-[1] mx-auto flex flex-col my-7 gap-10 flex-wrap flex-shrink flex-grow basis-[0%] max-w-[1200]">
-          <h3 className="flex justify-center text-4xl md:text-7xl lg:text-9xl">
-            The Team
-          </h3>
-          <div className="grid grid-rows-4 gap-4 lg:grid-rows-2 lg:grid-cols-2 xl:grid-cols-4 xl:grid-rows-none">
-            {team.map((item) => (
-              <TeamCard key={item.id} {...item} />
-            ))}
-          </div>
+      <div className="container relative z-[1] mx-auto flex flex-col my-20 gap-10 flex-wrap flex-shrink flex-grow basis-[0%] max-w-6xl w-full">
+        <h3 className="flex justify-center text-4xl md:text-7xl lg:text-9xl">
+          The Team
+        </h3>
+        <div className="grid grid-rows-4 gap-4 lg:grid-rows-2 lg:grid-cols-2 xl:grid-cols-4 xl:grid-rows-none">
+          {team.map((item) => (
+            <TeamCard key={item.id} {...item} />
+          ))}
         </div>
       </div>
     </div>

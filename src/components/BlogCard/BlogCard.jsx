@@ -15,7 +15,7 @@ const BlogCard = ({ tag, date, text, src }) => {
           <p className="mb-0 text-lg">{date}</p>
         </div>
         <p className="text-5xl">{text}</p>
-        <a className="text-lg">Read More</a>
+        <a className="hover:after:w-[18%] items-end">Read More</a>
       </div>
     </div>
   );

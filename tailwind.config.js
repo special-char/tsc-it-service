@@ -12,6 +12,7 @@ module.exports = {
       lightGray: "#d3d3d3",
       dimGray: "#747474",
       gray: "#8f8f8f",
+      slateBlue: "#4353ff"
     },
     fontSize: {
       xs: ["0.75em", "1.125em"],

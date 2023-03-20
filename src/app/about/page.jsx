@@ -6,7 +6,7 @@ import Team from "@/containers/team/Team";
 const About = () => {
   return (
     <div className="about mt-10 flex relative px-[5%] justify-center">
-      <div className="about_wrapper relative z-[1] mx-auto flex flex-col my-7 gap-10 flex-wrap flex-shrink flex-grow basis-[0%] max-w-[1200]">
+      <div className="container relative z-[1] mx-auto flex flex-col my-7 gap-10 flex-wrap flex-shrink flex-grow basis-[0%] max-w-6xl w-full">
         <div>
           <AboutScreen />
           <Banner />
