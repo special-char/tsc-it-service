@@ -1,30 +1,27 @@
-import Button from "@/components/Button/Button";
 import React from "react";
 
 const Hero = () => {
   return (
-    <div className="hero grid min-h-fit content-center items-center">
-      <div className="hero_wrapper mt-10 flex relative px-[4%] justify-center ">
-        <div className="container flex flex-1 gap-10 flex-col lg:flex-row mx-auto flex-grow flex-shrink max-w-6xl">
-          <div className="right_content flex flex-[50%] flex-col justify-start relative">
-            <h3 className="text-[160px]">
-              Think. <br /> <span className="text-dimGray">Create.</span> <br />
-              Solution.
-            </h3>
-          </div>
-          <div className="left_content flex flex-[50%] justify-between flex-col">
-            <div className="content relative flex flex-col gap-7 mt-40 overflow-hidden items-start justify-end">
-              <p className="text-3xl text-dimGray leading-10">
-                We are an award-winning branding and web agency committed to
-                excellence since forever.
-              </p>
-              <p className="text-3xl text-dimGray">
-                We set the standard of exceptional design creatively,
-                technically, sustainably, and ethically so that you can make the
-                extraordinary impact impact that you seek.
-              </p>
-              <button className="btn">View on Designer</button>
-            </div>
+    <div className="hero">
+      <div className="container gap-7 xl:gap-36 flex flex-col xl:flex-row max-w-[300px] sm:max-w-[355px] md:max-w-sm lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl w-full">
+        <div className="right_content flex flex-col justify-start relative">
+          <h3 className="text-9xl lg:text-[110px] 2xl:text-[140px]">
+            Think. <br /> <span className="text-dimGray">Create.</span> <br />
+            Solution.
+          </h3>
+        </div>
+        <div className="left_content flex justify-between 2xl:mt-16 flex-col">
+          <div className="content relative flex flex-col flex-wrap gap-7 overflow-hidden items-start justify-end">
+            <p className="text-3xl text-dimGray leading-10">
+              We are an award-winning branding and web agency committed to
+              excellence since forever.
+            </p>
+            <p className="text-3xl text-dimGray">
+              We set the standard of exceptional design creatively, technically,
+              sustainably, and ethically so that you can make the extraordinary
+              impact impact that you seek.
+            </p>
+            <button className="btn">View on Designer</button>
           </div>
         </div>
       </div>

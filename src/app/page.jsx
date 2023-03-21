@@ -1,44 +1,28 @@
 import { Inter } from "next/font/google";
-import Header from "@/containers/Header/Header";
 import Hero from "@/containers/hero/Hero";
-import Footer from "@/containers/footer/Footer";
-import PageHeader from "@/containers/pageHeader/PageHeader";
+
 import Banner from "@/containers/banner/Banner";
-import styles from "./page.module.css";
-import ServiceCard from "@/components/ServiceCard/ServiceCard";
-import About from "@/containers/about/About";
-import Team from "@/containers/team/Team";
-import TeamCard from "@/components/TeamCard/Team";
-import FAQ from "@/containers/faq/FAQ";
-import TestimonialCard from "@/components/TestimonialCard/TestimonialCard";
+import Services from "@/containers/services/Services";
+import Blog from "@/containers/blog/Blog";
 import FunFacts from "@/containers/funFacts/FunFacts";
-import ContactDetails from "@/containers/contactDetails/ContactDetails";
-import ContactCard from "@/components/ContactCard/ContactCard";
-import Location from "@/containers/location/Location";
+import Carousel from "@/components/Carousel/Carousel";
+import PageHeader from "@/containers/pageHeader/PageHeader";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
-      {/* <About />
-      <Team />
-      <TeamCard /> */}
-      <FAQ />
-      <Header />
-      <Hero />
-      {/* <Banner /> */}
-
-      {/* <PageHeader /> */}
-      {/* <Testimonial /> */}
-      <Footer />
-      {/* <TestimonialCard /> */}
-
-      {/* <PageHeader /> */}
-      {/* <Banner /> */}
-      {/* <FunFacts /> */}
-      {/* <ContactDetails /> */}
-      <Location />
+      <div className="home">
+        <div className="container relative z-[1] mx-auto max-w-[300px] sm:max-w-[355px] md:max-w-sm lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl flex flex-col flex-wrap w-full">
+          <Hero />
+          <PageHeader />
+          <Banner />
+          <Services />
+          <FunFacts />
+          <Blog />
+        </div>
+      </div>
     </>
   );
 }

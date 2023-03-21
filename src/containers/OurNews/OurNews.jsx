@@ -2,19 +2,18 @@ import React from "react";
 
 const OurNews = () => {
   return (
-    <div className="main_div">
-      <div className="wrapper">
-        <div className="container flex flex-col gap-4 xl:grid grid-cols-2 grid-rows-1 ">
-          <div>
-            <h1 className="text-[55px] xl:text-[170px]">Our</h1>
-            <p className="text-[55px] text-[#8f8f8f] xl:text-[170px]">News</p>
-          </div>
-          <div className="xl:pt-[60px]">
-            <p className="text-[#747474] text-[22px] mb-[50px] ">
-              We share our thoughts on design. We design awesome things.
-            </p>
-            <button className="btn">Work With Us</button>
-          </div>
+    <div className="grid grid-rows-2 gap-7 lg:grid-cols-2 lg:grid-rows-1 lg:gap-60">
+      <div className="right_content">
+        <h1 className="text-9xl lg:text-[170px]">
+          Our <br /> <span className="text-gray"> News </span>
+        </h1>
+      </div>
+      <div className="left_content grid grid-row content-center gap-7">
+        <p className="text-dimGray text-xxl">
+          We share our thoughts on design. We design awesome things.
+        </p>
+        <div>
+          <button className="btn">Work With Us</button>
         </div>
       </div>
     </div>
