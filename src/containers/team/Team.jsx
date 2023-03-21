@@ -31,7 +31,7 @@ const team = [
 const Team = () => {
   return (
     <div className="team">
-      <div className="container relative z-[1] mx-auto flex flex-col my-20 gap-10 flex-wrap flex-shrink flex-grow basis-[0%] max-w-6xl w-full">
+      <div className="container relative z-[1] mx-auto flex flex-col my-32 gap-10 flex-wrap flex-shrink flex-grow basis-[0%] max-w-[300px] sm:max-w-[355px] md:max-w-sm lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl w-full">
         <h3 className="flex justify-center text-4xl md:text-7xl lg:text-9xl">
           The Team
         </h3>

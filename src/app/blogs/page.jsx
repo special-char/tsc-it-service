@@ -1,4 +1,5 @@
 import BlogCard from "@/components/BlogCard/BlogCard";
+import OurNews from "@/containers/OurNews/OurNews";
 
 const data = [
   {
@@ -27,7 +28,8 @@ const data = [
 const Blogs = () => {
   return (
     <div className="blog">
-      <div className="container relative z-[1] mx-auto flex flex-col my-7 gap-10 flex-wrap flex-shrink flex-grow basis-[0%] w-full max-w-sm  md:max-w-2xl lg:max-w-4xl xl:max-w-6xl">
+      <div className="container relative z-[1] mx-auto flex flex-col  gap-10 flex-wrap flex-shrink flex-grow basis-[0%] w-full max-w-[300px] sm:max-w-[355px] md:max-w-sm lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl">
+        <OurNews />
         <div className="card grid grid-rows-3 gap-6 lg:grid-cols-2 lg:grid-rows-2">
           {data.map((item) => (
             <BlogCard key={item.id} {...item} />

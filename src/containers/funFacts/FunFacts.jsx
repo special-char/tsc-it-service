@@ -2,14 +2,14 @@ import React from "react";
 // import FunFact from "../../../public/images/FunFacts.jpg";
 const FunFacts = () => {
   return (
-    <div className="flex flex-col lg:flex-row my-10 justify-between w-full">
+    <div className="flex flex-col lg:flex-row my-10 max-w-[300px] sm:max-w-[355px] md:max-w-sm lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl justify-between w-full">
       {" "}
       <img
         src="https://assets.website-files.com/6315d6de2357050021f26e96/6317511da3f8cf2ff69330b3_photo-3-p-1080.jpg"
         className="aspect-auto w-[700px] lg:w-[500px]"
         alt="fun_facts"
       />
-      <div className="flex flex-col gap-4 justify-center pr-12">
+      <div className="flex flex-col gap-4 justify-center px-12">
         <h3 className="text-8xl">Fun Facts</h3>
 
         <h3 className="text-8xl">

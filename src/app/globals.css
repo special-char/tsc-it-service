@@ -34,7 +34,6 @@
   }
 
   a {
-   @apply text-lg cursor-pointer relative block pb-1 after:w-0 hover:after:w-[100%] after:absolute after:h-[1px] after:bottom-0 after:left-0 after:bg-dimGray after:ease-in-out after:duration-[0.7s]
   }
 
 

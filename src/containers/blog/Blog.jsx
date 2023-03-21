@@ -21,10 +21,12 @@ const data = [
 const Blog = () => {
   return (
     <div className="blog">
-      <div className="container relative z-[1] mx-auto my-10 max-w-6xl flex flex-col gap-10 flex-wrap flex-shrink flex-grow basis-[0%] w-full">
+      <div className="container relative z-[1] mx-auto my-20 max-w-[300px] sm:max-w-[355px] md:max-w-sm lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl flex flex-col gap-10 flex-wrap flex-shrink flex-grow basis-[0%] w-full">
         <div className="heading flex flex-col gap-3 md:flex-row md:justify-between items-center">
           <h3 className="text-6xl">From Blog</h3>
-          <a>View all Post</a>
+          <a className="text-lg cursor-pointer relative block pb-1 after:w-0 hover:after:w-[100%] after:absolute after:h-[1px] after:bottom-0 after:left-0 after:bg-dimGray after:ease-in-out after:duration-[0.7s]">
+            View all Post
+          </a>
         </div>
         <div className="card grid grid-rows-2 gap-6 lg:grid-cols-2 lg:grid-rows-none">
           {data.map((item) => (

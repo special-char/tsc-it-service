@@ -17,7 +17,7 @@ const Accordian = ({ text, paragraph }) => {
       <div className="flex justify-start border-b-lightGray border-b-2 ">
         <button
           onClick={toggleView}
-          className="flex flex-col text-start gap-5 translate-y-0 "
+          className="flex flex-col text-start gap-5 translate-y-0"
         >
           <div className="flex items-center gap-3">
             {direction === "open" ? <Add /> : <Remove />}

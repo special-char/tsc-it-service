@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Open from "../../../public/icons/open.svg";
 import Close from "../../../public/icons/close.svg";
 import Location from "../../../public/icons/location.svg";
-import Link from "next/link";
 
 const navItems = [
   { name: "HOME", href: "/" },
@@ -45,12 +44,12 @@ const Header = () => {
 
   return (
     <div className="navigation sticky bg-white z-20 top-0">
-      <div className="container flex flex-row justify-between items-center mx-auto max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl  py-10 flex-grow flex-shrink w-full">
-        <h1 href="#" className="text-9xl cursor-pointer">
+      <div className="container flex flex-row justify-between items-center mx-auto max-w-[300px] sm:max-w-[355px] md:max-w-sm lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl py-5 flex-grow flex-shrink w-full">
+        <h1 href="#" className="text-7xl cursor-pointer">
           TSC
         </h1>
         <button
-          className="left-0 hover:bg-slateBlue hover:rounded-full p-5 hover:duration-[0.8s] hover:ease-in-out"
+          className="left-0 hover:bg-slateBlue hover:rounded-full p-4 hover:duration-[0.8s] hover:ease-in-out"
           onClick={() => {
             setIsOpen(!isOpen);
           }}
@@ -59,21 +58,25 @@ const Header = () => {
         </button>
         <div
           className={`top-10 right-0 left-0 bottom-0 fixed h-full flex-1 bg-white p-10 ${
-            isOpen ? "translate-y-24" : "translate-y-full"
+            isOpen ? "translate-y-20" : "translate-y-full"
           } ease-in-out duration-700`}
         >
           <nav>
-            <ul className="flex flex-col justify-between text-9xl cursor-pointer gap-7 mt-6 text-center">
+            <ul className="flex flex-col justify-between text-3xl lg:text-7xl 2xl:text-9xl cursor-pointer gap-7 text-center">
               {navItems.map((item) => (
-                <a key={item.name} href={item.href}>
+                <a
+                  className="hover:text-slateBlue hover:duration-[0.5s]"
+                  key={item.name}
+                  href={item.href}
+                >
                   {" "}
                   {item.name}{" "}
                 </a>
               ))}
             </ul>
           </nav>
-          <div className="divider w-[98%] h-[1px] mx-auto mt-3 mb-12 bg-lightGray"></div>
-          <div className="links flex flex-row gap-7 justify-between items-center mx-10">
+          <div className="divider w-[98%] h-[1px] mx-auto mt-7 mb-12 bg-lightGray"></div>
+          <div className="links flex flex-col lg:flex-row gap-7 justify-between items-center mx-10">
             <div className="icons flex cursor-pointer gap-4">
               {socialIcons.map((item) => (
                 <img className="w-5" key={item.id} {...item} />

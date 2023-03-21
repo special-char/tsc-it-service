@@ -30,6 +30,14 @@ module.exports = {
       "8xl": ["52px", "1.3em"],
       "9xl": ["60px", "1.3em"],
     },
+    screens: {
+      "xs": '320px',
+      "sm": '375px',
+      "md": '425px',
+      "lg": '768px',
+      "xl": '1024px',
+      "2xl": '1440px'
+    },
     extend: {
       fontFamily: {
         sans: ["var(--font-satoshi)", ...fontFamily.sans],
