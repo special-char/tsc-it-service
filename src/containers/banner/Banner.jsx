@@ -8,7 +8,7 @@ const Banner = () => {
         <div className="content flex lg:flex-row-reverse flex-wrap flex-col gap-7">
           <div className="image flex-1">
             <img
-              className="aspect-auto w-[700px]"
+              className=""
               src="https://assets.website-files.com/6315d6de2357050021f26e96/63172900c798f906c10618bf_photo-1-p-500.jpg"
               alt="banner_image"
             />
@@ -21,7 +21,7 @@ const Banner = () => {
             </p>
             <button className="reel relative">
               <img
-                className="bg-slateBlue relative rounded-full p-2 aspect-square w-32 motion-safe:animate-[spin_7s_linear_infinite]"
+                className="bg-slateBlue relative rounded-full p-2 w-32 motion-safe:animate-[spin_7s_linear_infinite]"
                 src="https://assets.website-files.com/6315d6de2357050021f26e96/63172afabaf3d9640b2e3b00_play-p-500.png"
                 alt=""
               />
