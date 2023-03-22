@@ -26,13 +26,13 @@ const Services = () => {
           standard.
         </h3>
         <div>
-          <div className="grid grid-rows-3 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
+          <div className="grid grid-rows-3 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3 gap-8 lg:gap-4">
             {data.map((item) => (
               <PortfolioCard key={item.id} {...item} />
             ))}
             <div className="image">
               <img
-                className="aspect-square h-[300px] sm:h-[355px] md:h-[380px] lg:h-[340px] xl:h-[290px] 2xl:h-[360px] object-cover overflow-hidden"
+                className="object-cover overflow-hidden"
                 src="https://assets.website-files.com/6315d6de2357050021f26e96/631743540533da71eeb889f3_photo-2-p-500.jpg"
                 alt="portfolio_image"
               />

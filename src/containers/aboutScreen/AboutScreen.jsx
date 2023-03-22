@@ -4,34 +4,8 @@ import React from "react";
 
 const AboutScreen = async () => {
   const data = await getAboutData();
-  // console.log("About:", data);
 
-  return (
-    // <div className="about">
-    //   <div className="container relative z-[1] mb-20 mx-auto max-w-[300px] sm:max-w-[355px] md:max-w-sm lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl flex flex-col flex-wrap w-full">
-    //     <div className="content flex flex-col gap-20 lg:flex-row">
-    //       <div>
-    //         <img
-    //           className="image aspect-auto w-[600px] lg:w-[500px]"
-    //           src="https://assets.website-files.com/6315d6de2357050021f26e96/63187ca7418405f870aba348_photo-4-p-1080.jpg"
-    //           alt=""
-    //         />
-    //       </div>
-
-    //       <div className="content items-start lg:px-12 flex-1 justify-center flex flex-col gap-10">
-    //         <h2>About Kofo</h2>
-    //         <p className="text-xxl lg:text-3xl text-dimGray">
-    //           We are an award-winning branding and web agency committed to
-    //           excellence since forever.
-    //         </p>
-
-    //         <button className="btn">View on Designer</button>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
-    <About data={data} />
-  );
+  return <About data={data} />;
 };
 
 export default AboutScreen;

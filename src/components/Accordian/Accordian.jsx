@@ -13,15 +13,15 @@ const Accordian = ({ text, paragraph }) => {
     setdirection(direction === "open" ? "close" : "open");
   };
   return (
-    <div className="w-full my-4 ">
+    <div className="w-full">
       <div className="flex justify-start border-b-lightGray border-b-2 ">
         <button
           onClick={toggleView}
           className="flex flex-col text-start gap-5 translate-y-0"
         >
-          <div className="flex items-center gap-3">
+          <div className="flex justify-around items-center gap-3">
             {direction === "open" ? <Add /> : <Remove />}
-            <p className="text-xxl my-4 lg:text-3xl">{text}</p>
+            <p className="text-lg my-4 lg:text-3xl">{text}</p>
           </div>
         </button>
       </div>
