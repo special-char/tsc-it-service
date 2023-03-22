@@ -26,7 +26,7 @@ const Services = () => {
           standard.
         </h3>
         <div>
-          <div className="grid grid-rows-3 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3 gap-2">
+          <div className="grid grid-rows-3 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3 gap-8 lg:gap-4">
             {data.map((item) => (
               <PortfolioCard key={item.id} {...item} />
             ))}

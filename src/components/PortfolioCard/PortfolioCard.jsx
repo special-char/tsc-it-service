@@ -2,7 +2,7 @@ import React from "react";
 
 const PortfolioCard = ({ src, title, paragraph }) => {
   return (
-    <div className="flex flex-col gap-7 p-3 justify-center bg-lightGray">
+    <div className="flex flex-col gap-7 px-3 justify-center bg-lightGray">
       <div className="image">
         <img className="img aspect-square items-start w-20" src={src} />
       </div>
