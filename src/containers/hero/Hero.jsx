@@ -1,73 +1,11 @@
+import HeroPage from "@/components/HeroPage/HeroPage";
+import { getHomeHeaderData } from "@/lib/getHomeHeaderData";
 import React from "react";
 
-const Hero = () => {
-  return (
-    <div className="hero">
-      <div className="container gap-7 xl:gap-10 flex flex-col xl:flex-row max-w-[300px] sm:max-w-[355px] md:max-w-sm lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl w-full">
-        <div className="right_content flex flex-1 flex-col justify-center relative">
-          <h3 className=" text-9xl lg:text-[110px] 2xl:text-[140px]">
-            Think. <br /> <span className="text-dimGray">Create.</span> <br />
-            Solution.
-          </h3>
-        </div>
-        <div className="left_content flex flex-1 justify-between 2xl:mt-16 flex-col">
-          <div className="content relative flex flex-col flex-wrap gap-7 overflow-hidden items-start justify-end">
-            <p className="text-3xl text-dimGray leading-10">
-              We are an award-winning branding and web agency committed to
-              excellence since forever.
-            </p>
-            <p className="text-3xl text-dimGray">
-              We set the standard of exceptional design creatively, technically,
-              sustainably, and ethically so that you can make the extraordinary
-              impact impact that you seek.
-            </p>
-            <button className="btn">View on Designer</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+const Hero = async () => {
+  const data = await getHomeHeaderData();
 
-  // <div className="hero flex relative h-screen pb-14 px-[4%] justify-center items-center">
-  //   <div className="container relative mx-auto flex-grow flex-shrink max-w-6xl">
-  //     <div className="hero flex flex-row gap-20">
-  //       <div className="part2 flex flex-col justify-between">
-  //         <div className="hero_flex relative flex flex-col overflow-hidden justify-start items-center">
-  //           <div className="hero_display justify-start flex relative z-[1] text-[170px] leading-tight">
-  //             Think.
-  //           </div>
-  //           <div className="hero_display relative z-[1] text-[130px] leading-tight text-gray">
-  //             Create.
-  //           </div>
-  //           <div className="hero_display relative z-[1] text-[170px] leading-tight">
-  //             Solution.
-  //           </div>
-  //         </div>
-  //       </div>
-  //       <div className="part1 flex justify-between flex-col">
-  //         <div className="hero_flex relative flex flex-col overflow-hidden justify-start items-center text-start">
-  //           <p className="paragraph text-xxl text-dimGray">
-  //             We are an award-winning branding and web agency committed to
-  //             excellence since forever.
-  //           </p>
-  //           <p className="paragraph text-xxl text-dimGray">
-  //             We set the standard of exceptional design creatively,
-  //             technically, sustainably, and ethically so that you can make the
-  //             extraordinary impact impact that you seek.
-  //           </p>
-  //         </div>
-  //         <div className="relative flex flex-row items-center">
-  //           <Button text="View On Designer" />
-  //           <img
-  //             className="absolute right-0 w-24 opacity-100"
-  //             src="https://assets.website-files.com/6315d6de2357050021f26e96/63171d2704da6da8b4049353_sammy-line-paper-plane.svg"
-  //             alt="airplane"
-  //           />
-  //         </div>
-  //       </div>
-  //     </div>
-  //   </div>
-  // </div>
+  return <HeroPage data={data} />;
 };
 
 export default Hero;
