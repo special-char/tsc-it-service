@@ -1,8 +1,8 @@
 import FunFact from "@/components/FunFact/FunFact";
-import { getFunFacts } from "@/lib/getfunFacts";
+import { getFunFacts, getFunFactsData } from "@/lib/getFunFactsData";
 
 const FunFacts = async () => {
-  const data = await getFunFacts();
+  const data = await getFunFactsData();
   //console.log("FunFacts:", data);
 
   return (

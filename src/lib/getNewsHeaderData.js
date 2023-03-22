@@ -1,5 +1,5 @@
 
-export const getFunFacts = async () => {
+export const getNewsHeaderData = async () => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/graphql`, {
       method: 'POST',
       headers: {
@@ -8,32 +8,23 @@ export const getFunFacts = async () => {
       },
       body: JSON.stringify({
         query: `{
-            funFact{
-              data{
-                id
-                attributes{
-                  image{
-                    data{
-                      attributes{
-                        url
-                        alternativeText
-                      }
-                    }
-                  }
-                  details{
-                    title
-                    value
-                  }
-                  title
+          newsHeader{
+            data{
+              id
+              attributes{
+                NewsHeader{
+                  heading1
+                  heading2
+                  description
                   button{
-                    id
-                    text
+                    btnTxt
                     url
                   }
                 }
               }
             }
-          }`,
+          }
+        }`,
       }),
       
       cache: 'no-cache',
