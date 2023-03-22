@@ -1,4 +1,5 @@
 "use client";
+import clsx from "clsx";
 import React, { useState } from "react";
 import Open from "../../../public/icons/open.svg";
 import Close from "../../../public/icons/close.svg";
@@ -43,8 +44,8 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="navigation sticky bg-white z-20 top-0">
-      <div className="container flex flex-row justify-between items-center mx-auto max-w-[300px] sm:max-w-[355px] md:max-w-sm lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl py-5 flex-grow flex-shrink w-full">
+    <>
+      <header className="px-container flex fixed w-full items-center justify-between z-50">
         <h1 href="#" className="text-7xl cursor-pointer">
           TSC
         </h1>
@@ -56,40 +57,41 @@ const Header = () => {
         >
           {isOpen ? <Close /> : <Open />}
         </button>
-        <div
-          className={`top-10 right-0 left-0 bottom-0 fixed h-full flex-1 bg-white p-10 ${
-            isOpen ? "translate-y-20" : "translate-y-full"
-          } ease-in-out duration-700`}
-        >
-          <nav>
-            <ul className="flex flex-col justify-between text-3xl lg:text-7xl 2xl:text-9xl cursor-pointer gap-7 text-center">
-              {navItems.map((item) => (
-                <a
-                  className="hover:text-slateBlue hover:duration-[0.5s]"
-                  key={item.name}
-                  href={item.href}
-                >
-                  {" "}
-                  {item.name}{" "}
-                </a>
-              ))}
-            </ul>
-          </nav>
-          <div className="divider w-[98%] h-[1px] mx-auto mt-7 mb-12 bg-lightGray"></div>
-          <div className="links flex flex-col lg:flex-row gap-7 justify-between items-center mx-10">
-            <div className="icons flex cursor-pointer gap-4">
-              {socialIcons.map((item) => (
-                <img className="w-5" key={item.id} {...item} />
-              ))}
-            </div>
-            <div className="location flex gap-3 cursor-pointer items-center">
-              <Location fill="gray" />
-              <span className="text-gray">Gujarat, Ahmedabad</span>
-            </div>
+      </header>
+      <nav
+        className={clsx(
+          "fixed flex flex-col h-screen inset-0 bg-white z-40 ease-in-out delay-100 duration-700 translate-y-0",
+          {
+            "-translate-y-full": !isOpen,
+          }
+        )}
+      >
+        <ul className="flex flex-1 flex-col text-3xl lg:text-7xl 2xl:text-9xl cursor-pointer gap-7 text-center">
+          {navItems.map((item) => (
+            <li key={item.name}>
+              <a
+                className="hover:text-slateBlue hover:duration-[0.5s]"
+                href={item.href}
+              >
+                {item.name}{" "}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <div className=" mx-8 h-[1px] mt-7 mb-12 bg-lightGray"></div>
+        <div className=" flex flex-col lg:flex-row gap-7 justify-between items-center mx-10">
+          <div className="icons flex cursor-pointer gap-4">
+            {socialIcons.map((item) => (
+              <img className="w-5" key={item.id} {...item} />
+            ))}
+          </div>
+          <div className="location flex gap-3 cursor-pointer items-center">
+            <Location fill="gray" />
+            <span className="text-gray">Gujarat, Ahmedabad</span>
           </div>
         </div>
-      </div>
-    </div>
+      </nav>
+    </>
   );
 };
 
