@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroPage = (data) => {
   const homeHeaderData = data?.data?.data?.homeHeader?.data;
-  console.log("HeroPage data:", homeHeaderData?.attributes?.homeHeader?.button);
+  //   console.log("HeroPage data:", homeHeaderData?.attributes?.homeHeader?.button);
 
   return (
     <div className="hero">
