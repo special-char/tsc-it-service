@@ -5,14 +5,14 @@ const FunFact = (data) => {
   console.log("FunFact data:", FunFactsdata);
   //console.log("FunFact data:", FunFactsdata?.attributes?.details);
   return (
-    <div className="flex flex-col xl:flex-row my-10 xl:gap-20 max-w-[300px] sm:max-w-[355px] md:max-w-sm lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl justify-between w-full">
+    <div className="px-container min-h-screen flex flex-wrap justify-between pb-20">
       {" "}
       <img
         src={FunFactsdata?.attributes?.image?.data?.attributes?.url}
-        className="aspect-auto xl:w-[500px] pb-9"
+        className="aspect-auto pb-9"
         alt="fun_facts"
       />
-      <div className="flex flex-col gap-8 justify-center px-12">
+      <div className="flex flex-col gap-8 justify-center">
         <h3 className="text-7xl 2xl:text-9xl">
           {FunFactsdata?.attributes?.title}
         </h3>
@@ -23,11 +23,10 @@ const FunFact = (data) => {
             </h3>
           );
         })}
-        <div>
-          <button className="btn" href={FunFactsdata?.attributes?.button?.url}>
-            {FunFactsdata?.attributes?.button?.text}
-          </button>
-        </div>
+
+        <button className="btn" href={FunFactsdata?.attributes?.button?.url}>
+          {FunFactsdata?.attributes?.button?.text}
+        </button>
       </div>
     </div>
   );

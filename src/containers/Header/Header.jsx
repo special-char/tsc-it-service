@@ -45,8 +45,8 @@ const Header = () => {
 
   return (
     <>
-      <header className="px-container flex fixed w-full items-center justify-between z-50">
-        <h1 href="#" className="text-7xl cursor-pointer">
+      <header className="px-container flex fixed w-full items-center justify-between z-50 bg-white py-5">
+        <h1 href="#" className="text-7xl">
           TSC
         </h1>
         <button
@@ -58,39 +58,41 @@ const Header = () => {
           {isOpen ? <Close /> : <Open />}
         </button>
       </header>
-      <nav
-        className={clsx(
-          "fixed flex flex-col h-screen inset-0 bg-white z-40 ease-in-out delay-100 duration-700 translate-y-0",
-          {
-            "-translate-y-full": !isOpen,
-          }
-        )}
-      >
-        <ul className="flex flex-1 flex-col text-3xl lg:text-7xl 2xl:text-9xl cursor-pointer gap-7 text-center">
-          {navItems.map((item) => (
-            <li key={item.name}>
-              <a
-                className="hover:text-slateBlue hover:duration-[0.5s]"
-                href={item.href}
-              >
-                {item.name}{" "}
-              </a>
-            </li>
-          ))}
-        </ul>
-        <div className=" mx-8 h-[1px] mt-7 mb-12 bg-lightGray"></div>
-        <div className=" flex flex-col lg:flex-row gap-7 justify-between items-center mx-10">
-          <div className="icons flex cursor-pointer gap-4">
-            {socialIcons.map((item) => (
-              <img className="w-5" key={item.id} {...item} />
+      {isOpen && (
+        <nav
+          className={clsx(
+            "fixed flex flex-col h-screen z-40 inset-0 bg-white ease-in-out delay-100 duration-800 translate-y-0",
+            {
+              "-translate-y-full": !isOpen,
+            }
+          )}
+        >
+          <ul className="flex flex-1 flex-col pt-20 text-5xl lg:text-7xl 2xl:text-9xl justify-center gap-7 text-center">
+            {navItems.map((item) => (
+              <li key={item.name}>
+                <a
+                  className="hover:text-slateBlue hover:duration-[0.5s] cursor-pointer"
+                  href={item.href}
+                >
+                  {item.name}{" "}
+                </a>
+              </li>
             ))}
+          </ul>
+
+          <div className=" flex flex-col lg:flex-row justify-center lg:justify-between pb-5 lg:px-4 border-t-2 border-lightGray mx-4 pt-8 items-center">
+            <div className="icons flex justify-start cursor-pointer gap-6">
+              {socialIcons.map((item) => (
+                <img className="w-5" key={item.id} {...item} />
+              ))}
+            </div>
+            <div className="location flex gap-3 cursor-pointer items-center">
+              <Location fill="gray" />
+              <span className="text-gray">Gujarat, Ahmedabad</span>
+            </div>
           </div>
-          <div className="location flex gap-3 cursor-pointer items-center">
-            <Location fill="gray" />
-            <span className="text-gray">Gujarat, Ahmedabad</span>
-          </div>
-        </div>
-      </nav>
+        </nav>
+      )}
     </>
   );
 };

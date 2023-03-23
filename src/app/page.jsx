@@ -17,7 +17,7 @@ export default function Home() {
       <PageHeader />
       <Banner />
       <Services />
-      {/* <FunFacts /> */}
+      <FunFacts />
       <Blog />
     </>
   );

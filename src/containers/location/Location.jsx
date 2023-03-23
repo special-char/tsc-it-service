@@ -24,7 +24,7 @@ const content = [
 
 const Location = () => {
   return (
-    <div className="grid grid-rows-3 gap-4 lg:grid-cols-3 md:grid-rows-none xl:mt-32">
+    <div className="px-container pb-32 flex justify-center gap-4 items-center">
       {content.map((item) => (
         <ContactCard key={item.id} {...item} />
       ))}

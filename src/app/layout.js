@@ -16,7 +16,7 @@ const satoshi = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${satoshi.variable} font-sans`}>
+      <body className={`${satoshi.variable} font-sans relativeS`}>
         <Header />
         {children}
         <Footer />
