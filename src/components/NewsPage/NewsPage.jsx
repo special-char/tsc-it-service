@@ -5,7 +5,7 @@ const NewsPage = (data) => {
   console.log("NewsPage data:", newsHeaderData);
 
   return (
-    <div className="px-container min-h-screen pt-32 flex flex-col">
+    <div className="px-container min-h-screen pt-32 flex flex-col xl:flex-row justify-center items-center">
       <div className="right_content flex-1">
         <h1 className="text-9xl md:text-[110px]">
           {newsHeaderData?.attributes?.NewsHeader?.heading1}

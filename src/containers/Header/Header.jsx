@@ -6,10 +6,10 @@ import Close from "../../../public/icons/close.svg";
 import Location from "../../../public/icons/location.svg";
 
 const navItems = [
-  { name: "HOME", href: "/" },
-  { name: "ABOUT", href: "/about" },
-  { name: "NEWS", href: "/blogs" },
-  { name: "CONTACT", href: "/contact" },
+  { id: 1, name: "HOME", href: "/" },
+  { id: 2, name: "ABOUT", href: "/about" },
+  { id: 3, name: "NEWS", href: "/blogs" },
+  { id: 4, name: "CONTACT", href: "/contact" },
 ];
 
 const socialIcons = [
@@ -42,6 +42,12 @@ const socialIcons = [
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isRotated, setIsRotated] = useState(false);
+
+  const toggleOpen = () => {
+    setIsOpen(!isOpen);
+    setIsRotated(!isRotated);
+  };
 
   return (
     <>
@@ -50,49 +56,50 @@ const Header = () => {
           TSC
         </h1>
         <button
-          className="left-0 hover:bg-slateBlue hover:rounded-full p-4 hover:duration-[0.8s] hover:ease-in-out"
-          onClick={() => {
-            setIsOpen(!isOpen);
-          }}
+          className="left-0 hover:bg-slateBlue hover:rounded-full p-4 duration-[0.8s] ease-in-out"
+          onClick={toggleOpen}
         >
-          {isOpen ? <Close /> : <Open />}
+          <Open
+            className={clsx(" duration-200", {
+              "transform rotate-45": isRotated,
+            })}
+          />
         </button>
       </header>
-      {isOpen && (
-        <nav
-          className={clsx(
-            "fixed flex flex-col h-screen z-40 inset-0 bg-white ease-in-out delay-100 duration-800 translate-y-0",
-            {
-              "-translate-y-full": !isOpen,
-            }
-          )}
-        >
-          <ul className="flex flex-1 flex-col pt-20 text-5xl lg:text-7xl 2xl:text-9xl justify-center gap-7 text-center">
-            {navItems.map((item) => (
-              <li key={item.name}>
-                <a
-                  className="hover:text-slateBlue hover:duration-[0.5s] cursor-pointer"
-                  href={item.href}
-                >
-                  {item.name}{" "}
-                </a>
-              </li>
-            ))}
-          </ul>
 
-          <div className=" flex flex-col lg:flex-row justify-center lg:justify-between pb-5 lg:px-4 border-t-2 border-lightGray mx-4 pt-8 items-center">
-            <div className="icons flex justify-start cursor-pointer gap-6">
-              {socialIcons.map((item) => (
-                <img className="w-5" key={item.id} {...item} />
-              ))}
-            </div>
-            <div className="location flex gap-3 cursor-pointer items-center">
-              <Location fill="gray" />
-              <span className="text-gray">Gujarat, Ahmedabad</span>
-            </div>
+      <nav
+        className={clsx(
+          "fixed flex flex-col h-screen z-40 inset-0 bg-white ease-in-out duration-500 -translate-y-full",
+          {
+            "translate-y-0": isOpen,
+          }
+        )}
+      >
+        <ul className="flex flex-1 flex-col pt-20 text-5xl lg:text-7xl 2xl:text-9xl justify-center gap-7 text-center">
+          {navItems.map((item) => (
+            <li key={item.id}>
+              <a
+                className="hover:text-slateBlue hover:duration-[0.5s] cursor-pointer"
+                href={item.href}
+              >
+                {item.name}{" "}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <div className=" flex flex-col gap-7  lg:flex-row justify-center lg:justify-between pb-5 lg:px-4 border-t-2 border-lightGray mx-4 pt-8 items-center">
+          <div className="icons flex justify-start cursor-pointer gap-6">
+            {socialIcons.map((item) => (
+              <img className="w-5" key={item.id} {...item} />
+            ))}
           </div>
-        </nav>
-      )}
+          <div className="location flex gap-3 cursor-pointer items-center">
+            <Location fill="gray" />
+            <span className="text-gray">Gujarat, Ahmedabad</span>
+          </div>
+        </div>
+      </nav>
     </>
   );
 };

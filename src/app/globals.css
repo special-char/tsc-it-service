@@ -41,6 +41,6 @@
 
 @layer components {
   .btn {
-    @apply text-dimGray py-4 px-6 rounded-md border-2 bg-gainsboro border-gainsboro hover:bg-slateBlue hover:border-slateBlue hover:text-white hover:duration-[0.3s] hover:ease-in-out;
+    @apply text-dimGray py-4 px-6 rounded-md border-2 bg-gainsboro border-gainsboro hover:bg-slateBlue hover:border-slateBlue hover:text-white duration-[0.4s] ease-in-out;
   }
 }

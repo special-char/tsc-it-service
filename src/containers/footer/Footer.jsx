@@ -72,7 +72,7 @@ const Footer = () => {
           <div className="flex flex-col lg:items-end flex-1 gap-4 lg:-mt-16">
             <div className="icons flex gap-7">
               {socialIcons.map((item) => (
-                <img className="w-5" key={item.id} {...item} />
+                <img className="w-5 cursor-pointer" key={item.id} {...item} />
               ))}
             </div>
             <div className="link flex flex-col gap-4 pt-7 lg:items-end">

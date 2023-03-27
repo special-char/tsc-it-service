@@ -41,7 +41,7 @@ const FAQ = () => {
         Frequently asked questions
       </h2>
 
-      <div className="flex flex-col px-10">
+      <div className="flex flex-col px-28">
         {accordian.map((item) => (
           <Accordian key={item.id} {...item} />
         ))}
