@@ -1,4 +1,5 @@
 import TeamCard from "@/components/TeamCard/TeamCard";
+import { getTeamMembersData } from "@/lib/getTeamMembersData";
 import React from "react";
 
 const team = [
@@ -28,18 +29,23 @@ const team = [
   },
 ];
 
-const Team = () => {
+const Team = async () => {
+  const data = await getTeamMembersData();
+  const teamMembersData = data?.data?.teamMembers?.data[0]?.attributes?.team;
+  // console.log(
+  //   "getTeamMembersData:",
+  //   data?.data?.teamMembers?.data[0]?.attributes?.team
+  // );
+
   return (
-    <div className="team">
-      <div className="container relative z-[1] mx-auto flex flex-col my-32 gap-10 flex-wrap flex-shrink flex-grow basis-[0%] max-w-[300px] sm:max-w-[355px] md:max-w-sm lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl w-full">
-        <h3 className="flex justify-center text-4xl md:text-7xl lg:text-9xl">
-          The Team
-        </h3>
-        <div className="grid grid-rows-4 gap-4 lg:grid-rows-2 lg:grid-cols-2 xl:grid-cols-4 xl:grid-rows-none">
-          {team.map((item) => (
-            <TeamCard key={item.id} {...item} />
-          ))}
-        </div>
+    <div className="px-container relative z-[1] mx-auto flex justify-center items-center flex-col my-32 gap-10 flex-wrap min-h-screen">
+      <h3 className="flex justify-center text-6xl md:text-7xl lg:text-9xl">
+        The Team
+      </h3>
+      <div className="grid grid-rows-4 gap-4 lg:grid-rows-2 lg:grid-cols-2 xl:grid-cols-4 xl:grid-rows-none">
+        {teamMembersData.map((item) => (
+          <TeamCard key={item.id} data={item} />
+        ))}
       </div>
     </div>
   );

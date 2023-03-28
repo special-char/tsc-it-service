@@ -27,16 +27,14 @@ const data = [
 
 const Blogs = () => {
   return (
-    <div className="blog">
-      <div className="relative z-[1] flex flex-col mx-auto sm:max-w-[355px] md:max-w-sm lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl pb-10 px-[4%] lg:px-0">
-        <OurNews />
-        <div className="card  grid grid-rows-2 gap-10 lg:grid-cols-2 lg:grid-rows-none ">
-          {data.map((item) => (
-            <BlogCard key={item.id} {...item} />
-          ))}
-        </div>
+    <>
+      <OurNews />
+      <div className="px-container min-h-screen grid grid-rows-2 gap-10 lg:grid-cols-2 lg:grid-rows-none ">
+        {data.map((item) => (
+          <BlogCard key={item.id} {...item} />
+        ))}
       </div>
-    </div>
+    </>
   );
 };
 
