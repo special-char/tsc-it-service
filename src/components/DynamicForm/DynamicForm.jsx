@@ -17,7 +17,7 @@ const wait = (time) =>
 //   wrapperClass?: string;
 // };
 
-const DynamicForm = ({
+const  DynamicForm = ({
   fields,
   submitUrl,
   formMethod,

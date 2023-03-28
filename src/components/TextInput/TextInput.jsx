@@ -16,15 +16,15 @@ const TextInput = ({
 }) => {
   return (
     <div
-      className={clsx("form__group", {
+      className={clsx("form__group border-spacing-2 w-full border-[#e1e1e1] border p-4 rounded-md m-2", {
         [wrapperClass]: !!wrapperClass,
       })}
     >
-      <label className="form__group__label">{label}</label>
+      {/* <label className="form__group__label">{label}</label> */}
       <input
         type="text"
         className={clsx("form__group__input", {
-          "border border-error outline-error": !!(
+          "border border-error outline-error border-spacing-2 w-full border-black": !!(
             touched[field.name] && errors[field.name]
           ),
         })}

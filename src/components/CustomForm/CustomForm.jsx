@@ -27,7 +27,7 @@ const CustomForm = ({
     <Formik enableReinitialize {...rest}>
       {({ isSubmitting }) => (
         <Form
-          className={clsx("form relative", {
+          className={clsx("form  flex flex-col max-w-screen-lg  mx-auto", {
             [wrapperClass || ""]: !!wrapperClass,
           })}
           {...formMethod}
