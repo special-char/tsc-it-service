@@ -4,10 +4,6 @@ import Play from "../../../public/icons/play_arrow.svg";
 
 const BannerPage = (data) => {
   const bannerData = data?.data?.data?.bannerPage?.data?.attributes;
-  console.log(
-    "BannerPage data:",
-    bannerData?.bannerPage?.image?.data?.attributes?.url
-  );
 
   return (
     <div className="px-container items-center flex xl:flex-row-reverse pb-20 flex-col gap-10 min-h-screen">

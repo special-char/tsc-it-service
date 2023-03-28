@@ -3,8 +3,6 @@ import React from "react";
 
 const About = (data) => {
   const aboutData = data?.data?.data?.about?.data;
-  // console.log("About data:", aboutData);
-  //   console.log(aboutData);
 
   return (
     <div className="px-container min-h-screen flex flex-col lg:flex-row items-center justify-between gap-20 pt-32">

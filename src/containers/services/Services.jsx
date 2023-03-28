@@ -1,7 +1,8 @@
 import PortfolioCard from "@/components/PortfolioCard/PortfolioCard";
+import { getServicesData } from "@/lib/getServicesData";
 import React from "react";
 
-const data = [
+const service = [
   {
     id: 1,
     src: "https://assets.website-files.com/6315d6de2357050021f26e96/6317426cb417e779ec15be2b_icons8-school-director-256%20(2).png",
@@ -16,7 +17,12 @@ const data = [
   },
 ];
 
-const Services = () => {
+const Services = async () => {
+  const data = await getServicesData();
+
+  const getServices = data?.data?.services?.data;
+
+  // console.log("getServices:", data?.data?.services?.data);
   return (
     <div className="px-container items-center justify-center pb-20 relative z-[1] flex flex-col gap-10 min-h-screen">
       <h3 className="mt-3 text-4xl">
@@ -25,8 +31,8 @@ const Services = () => {
       </h3>
 
       <div className="grid grid-rows-3 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3 gap-8 lg:gap-4">
-        {data.map((item) => (
-          <PortfolioCard key={item.id} {...item} />
+        {getServices.map((item) => (
+          <PortfolioCard key={item.id} data={item} />
         ))}
 
         <img

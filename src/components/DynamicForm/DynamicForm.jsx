@@ -54,7 +54,6 @@ const DynamicForm = ({
           },
         }
       );
-      console.log(values);
       setIsSubmitted(true);
       actions.resetForm();
     } catch (error) {

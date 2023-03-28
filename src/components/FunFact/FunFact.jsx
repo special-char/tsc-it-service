@@ -2,8 +2,6 @@ import React from "react";
 
 const FunFact = (data) => {
   const FunFactsdata = data?.data?.data?.funFact?.data;
-  // console.log("FunFact data:", FunFactsdata);
-  //console.log("FunFact data:", FunFactsdata?.attributes?.details);
   return (
     <div className="px-container min-h-screen flex flex-col xl:gap-36 gap-10  xl:flex-row pb-20">
       <div className="flex-1">

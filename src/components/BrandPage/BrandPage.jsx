@@ -3,7 +3,6 @@ import React from "react";
 
 const BrandPage = (data) => {
   const brandData = data?.data?.data?.brand?.data;
-  console.log("BrandsPage data:", brandData?.attributes?.images?.data);
 
   return (
     <div className="px-container z-[1] flex flex-col justify-center pb-20 flex-wrap min-h-screen">
