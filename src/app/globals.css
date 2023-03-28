@@ -36,15 +36,11 @@
   a {
   }
 
-  a.small {
-  }
 
-  a.large {
-  }
 }
 
 @layer components {
   .btn {
-    @apply text-dimGray py-4 px-6 rounded-md border-2 bg-lightGray border-lightGray
+    @apply text-dimGray py-4 px-6 rounded-md border-2 bg-gainsboro border-gainsboro hover:bg-slateBlue hover:border-slateBlue hover:text-white duration-[0.4s] ease-in-out;
   }
 }
