@@ -1,0 +1,12 @@
+.reviews {
+    @apply flex text-center items-center;
+  
+    & > svg {
+      @apply fill-dimGray;
+    }
+  
+    &__count {
+      @apply text-lightGray mb-0 font-bold bg-gray100 trans ;
+    }
+  }
+  

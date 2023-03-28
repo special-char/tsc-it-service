@@ -20,11 +20,13 @@ const TextArea = ({
         [wrapperClass]: !!wrapperClass,
       })}
     >
-      <label className="form__group__label">{label}</label>
+      {/* <label className="form__group__label">{label}</label> */}
       <textarea
-        className="form__group__textarea"
+        className="form__group__textarea  border-spacing-2 w-full m-1 border-[#e1e1e1] border p-4 ml-1 rounded-md "
         {...field}
         {...rest}
+        
+        
       ></textarea>
       {touched[field.name] && errors[field.name] && (
         <p className="form__group__error">{errors[field.name]}</p>
