@@ -17,7 +17,7 @@ const ContactForm = async () => {
   // console.log(fields);
 
   return (
-    <div className="contact__body">
+    <div className="contact__body px-container min-h-screen">
       <DynamicForm fields={fields} submitUrl={submitUrl} />
     </div>
   );
