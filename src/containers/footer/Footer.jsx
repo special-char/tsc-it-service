@@ -40,7 +40,10 @@ const Footer = () => {
   return (
     <div className="px-container relative z-[1] min-h-screen flex flex-col pt-20 bg-gray100">
       <div className="uppercontent flex flex-col items-center justify-center gap-7 pb-16 border-b-2 border-b-lightGray">
-        <a href="#" className="p-3 border-2 border-lightGray text-dimGray">
+        <a
+          href="/contact"
+          className="p-3 border-2 border-lightGray text-dimGray"
+        >
           Stay in touch
         </a>
         <h3 className="text-6xl lg:text-9xl">Ready to talk</h3>

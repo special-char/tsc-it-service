@@ -2,9 +2,10 @@ import React from "react";
 
 const HeroPage = (data) => {
   const homeHeaderData = data?.data?.data?.homeHeader?.data;
+  // console.log(homeHeaderData?.attributes?.homeHeader?.button?.url);
 
   return (
-    <div className="px-container flex flex-col xl:flex-row gap-10 min-h-screen pt-32">
+    <div className="px-container flex flex-col xl:flex-row gap-16 min-h-screen pt-32">
       <div className="flex flex-col items-start justify-center">
         <h2 className="text-9xl font-sans lg:text-[110px] 2xl:text-[140px]">
           {homeHeaderData?.attributes?.homeHeader?.heading1}

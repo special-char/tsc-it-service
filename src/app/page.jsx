@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      {/* <PageHeader /> */}
+      <PageHeader />
       <Banner />
       <Services />
       <FunFacts />

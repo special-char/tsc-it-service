@@ -29,7 +29,7 @@ const Blogs = () => {
   return (
     <>
       <OurNews />
-      <div className="px-container min-h-screen grid grid-rows-2 gap-10 lg:grid-cols-2 lg:grid-rows-none ">
+      <div className="px-container min-h-screen pb-20 grid grid-rows-2 gap-10 lg:grid-cols-2 lg:grid-rows-none ">
         {data.map((item) => (
           <BlogCard key={item.id} {...item} />
         ))}
