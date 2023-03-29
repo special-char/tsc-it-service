@@ -7,6 +7,7 @@ import Blog from "@/containers/blog/Blog";
 import FunFacts from "@/containers/funFacts/FunFacts";
 import Carousel from "@/components/Carousel/Carousel";
 import PageHeader from "@/containers/pageHeader/PageHeader";
+import WorkFlow from "@/components/WorkFlow/WorkFlow";
 
 const inter = Inter({ subsets: ["latin"] });
 
