@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 
 const navItems = [
@@ -5,7 +6,7 @@ const navItems = [
   { name: "About", href: "" },
   { name: "StyleGuide", href: "" },
   { name: "Licensing", href: "" },
-  { name: "Instructions", href: "" },
+  { name: "Instructions", href: "" }
 ];
 
 const socialIcons = [
@@ -14,36 +15,36 @@ const socialIcons = [
     src: "https://assets.website-files.com/6315d6de2357050021f26e96/6315f5173de44a84d797a6fb_linkedin.png",
     alt: "linkedin",
     class:
-      " hover:py-4 hover:px-4 items-center rounded-full hover:bg-[#0077B5]   hover:text-white before:content-[''] m-auto   before:scale-150  duration-700",
+      " hover:py-2 hover:px-2 items-center rounded-full hover:bg-[#0077B5]   hover:text-white before:content-[''] m-auto   before:scale-150  duration-700"
   },
   {
     id: 2,
     src: "https://assets.website-files.com/6315d6de2357050021f26e96/6315f5173de44afa9f97a701_instagram.png",
     alt: "instagram",
     class:
-      " hover:py-4 hover:px-4 items-center rounded-full hover:bg-[#e4405f]   hover:text-white before:content-[''] m-auto   before:scale-150  duration-700",
+      " hover:py-2 hover:px-2 items-center rounded-full hover:bg-[#e4405f]   hover:text-white before:content-[''] m-auto   before:scale-150  duration-700"
   },
   {
     id: 3,
     src: "https://assets.website-files.com/6315d6de2357050021f26e96/6315f5173de44a02d697a6fd_twiiter.png",
     alt: "facebook",
     class:
-      " hover:py-4 hover:px-4 items-center rounded-full hover:bg-slateBlue   hover:text-white before:content-[''] m-auto   before:scale-150  duration-700",
+      "  hover:py-2 hover:px-2 items-center rounded-full hover:bg-slateBlue   hover:text-white before:content-[''] m-auto   before:scale-150  duration-700"
   },
   {
     id: 4,
     src: "https://assets.website-files.com/6315d6de2357050021f26e96/6315f5173de44a1a6697a6f9_twitter.png",
     alt: "twitter",
     class:
-      " hover:py-4 hover:px-4 items-center rounded-full hover:bg-[#1D9BF0]   hover:text-white before:content-[''] m-auto   before:scale-150  duration-700",
+      " hover:py-2 hover:px-2 items-center rounded-full hover:bg-[#1D9BF0]   hover:text-white before:content-[''] m-auto   before:scale-150  duration-700"
   },
   {
     id: 5,
     src: "https://assets.website-files.com/6315d6de2357050021f26e96/6315f5173de44a9a4e97a6ff_dribbble.png",
     alt: "dribble",
     class:
-      " hover:py-4 hover:px-4 items-center rounded-full hover:bg-[#e4405f]   hover:text-white before:content-[''] m-auto   before:scale-150  duration-700",
-  },
+      " hover:py-2 hover:px-2 items-center rounded-full hover:bg-[#e4405f]   hover:text-white before:content-[''] m-auto   before:scale-150  duration-700"
+  }
 ];
 
 const Footer = () => {
@@ -83,14 +84,15 @@ const Footer = () => {
             </nav>
           </div>
           <div className="flex flex-col lg:items-end flex-1 gap-4 lg:-mt-16">
-            <div className="icons flex gap-7 w-10 h-10 i">
+            <div className="icons flex gap-7 flex-1">
               {socialIcons.map((item) => (
                 // eslint-disable-next-line react/jsx-key
                 <div className={item.class}>
                   <img
-                    className="w-5  hover:text-white"
+                    className="w-5  hover:text-white flex-1"
                     key={item.id}
                     {...item}
+                    alt={item.id}
                   />
                 </div>
               ))}
