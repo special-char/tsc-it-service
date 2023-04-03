@@ -1,5 +1,7 @@
 "use client";
 import TestimonialCard from "@/components/TestimonialCard/TestimonialCard";
+import clsx from "clsx";
+import { Mina } from "next/font/google";
 import React, { useState } from "react";
 
 const data = [
@@ -94,35 +96,66 @@ const data = [
 ];
 
 const Testimonial = () => {
-  const [currentItem, setCurrentItem] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [card, setCard] = useState(true);
 
-  const navigateCard = (direction) => {
-    if (direction === "prev" && currentItem > 0) {
-      setCurrentItem(currentItem - 1);
-    } else if (direction === "next" && currentItem < data.length - 1) {
-      setCurrentItem(currentItem + 1);
-    }
+  const style = {
+    main: {
+      transform: `translateX(-${currentSlide * 37}%)`,
+    },
+    Opt: {
+      transform: `translateX(-${currentSlide * 112}%)`,
+    },
   };
+
+  const handleBulletClick = (index) => {
+    setCurrentSlide(index);
+  };
+
+  console.log("currentSlide:", currentSlide);
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full overflow-hidden my-8   snap-x">
       <div
-        className="flex transition duration-[1s] ease-in-out"
-        style={{ transform: `translateX(-${currentItem * 20}%)` }}
+        className={
+          "flex transition duration-[1s] ease-in-out gap-10 lg:pl-96 py-6 snap-center"
+        }
+        // style={{ transform: `translateX(-${currentSlide * 30}%)` }}
+
+        style={window.innerWidth > 768 ? style.main : style.Opt}
       >
-        {data.map((item) => (
-          <TestimonialCard {...item} key={item.id} />
-        ))}{" "}
+        {data.map((item, index) => (
+          <div
+            key={item.id}
+            className={clsx(
+              "opacity-100 flex grow shrink-0 w-screen  md:w-[460px] p-9  bg-lightGray snap-center",
+              {
+                "opacity-40": currentSlide !== index,
+              }
+            )}
+          >
+            <TestimonialCard {...item} key={item.id} />
+          </div>
+        ))}
       </div>
-      <div className="carousel-navigation flex justify-center mt-5">
-        <button className="prev-button" onClick={() => navigateCard("prev")}>
-          Prev
-        </button>
-        <button className="next-button" onClick={() => navigateCard("next")}>
-          Next
-        </button>
+
+      <div className="flex justify-center items-center mt-4">
+        {data.map((slide, index) => (
+          <div
+            className={
+              index === currentSlide
+                ? "bg-black w-2.5 h-2.5 border  cursor-pointer mx-2 my-0 rounded-[50%] border-solid  border-[#333]"
+                : " w-2.5 h-2.5 border  cursor-pointer mx-2 my-0 rounded-[50%] border-solid  border-[#333]"
+            }
+            key={index}
+            onClick={() => handleBulletClick(index)}
+          ></div>
+        ))}
       </div>
     </div>
   );
 };
 
 export default Testimonial;
+
+// w-2.5 h-2.5 border  cursor-pointer mx-2 my-0 rounded-[50%] border-solid  border-[#333]
+// transform: `translateX(-${currentSlide * 35}%)`

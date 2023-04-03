@@ -10,18 +10,16 @@ const TestimonialCard = ({
   img,
 }) => {
   return (
-    <div className="slide line-clamp-4 mx-5 overflow-visible">
-      <div className="slide_content flex flex-col justify-center items-center text-center px-10 py-11 bg-gainsboro">
-        <div className="client_wrapper  py-11 px-10 flex flex-col justify-center items-center text-center">
-          <Review {...rating} />
-          <p className="quote_text text-xl font-medium">{paragraph}</p>
-          <Author
-            testimonialName={testimonialName}
-            companyName={companyName}
-            img={img}
-          />
-        </div>
-      </div>
+    <div className="client_wrapper gap-7 flex flex-col justify-center items-center text-center">
+      <Review height={20} width={20} rate={22} {...rating} />
+      <p className="quote_text text-base font-thin md:text-xl text-gray">
+        {paragraph}
+      </p>
+      <Author
+        testimonialName={testimonialName}
+        companyName={companyName}
+        img={img}
+      />
     </div>
   );
 };
