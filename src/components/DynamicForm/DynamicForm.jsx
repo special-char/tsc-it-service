@@ -17,7 +17,7 @@ const wait = (time) =>
 //   wrapperClass?: string;
 // };
 
-const DynamicForm = ({
+const  DynamicForm = ({
   fields,
   submitUrl,
   formMethod,
@@ -54,7 +54,6 @@ const DynamicForm = ({
           },
         }
       );
-      console.log(values);
       setIsSubmitted(true);
       actions.resetForm();
     } catch (error) {

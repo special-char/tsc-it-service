@@ -2,7 +2,6 @@ import React from "react";
 
 const ContactDetailsPage = (data) => {
   const contactHeaderData = data?.data?.data?.bannerHeader?.data?.attributes;
-  console.log("ContactDetailsPage data:", contactHeaderData);
 
   return (
     <div className="px-container min-h-screen relative z-[1] flex flex-col xl:flex-row gap-7 xl:justify-between xl:items-center pt-32">

@@ -1,4 +1,5 @@
 import ContactCard from "@/components/ContactCard/ContactCard";
+import { getLocationData } from "@/lib/getLocationData";
 import React from "react";
 
 const content = [
@@ -22,11 +23,17 @@ const content = [
   },
 ];
 
-const Location = () => {
+const Location = async () => {
+  const data = await getLocationData();
+  const locationData = data?.data?.contactDetail?.data?.attributes?.addresses;
+  // console.log(
+  //   "locationData:",
+  //   data?.data?.contactDetail?.data?.attributes?.addresses
+  // );
   return (
     <div className="px-container pb-32 flex justify-center gap-4 items-center">
-      {content.map((item) => (
-        <ContactCard key={item.id} {...item} />
+      {locationData.map((item) => (
+        <ContactCard key={item.id} data={item} />
       ))}
     </div>
   );

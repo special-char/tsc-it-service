@@ -2,7 +2,6 @@ import React from "react";
 
 const NewsPage = (data) => {
   const newsHeaderData = data?.data?.data?.newsHeader?.data;
-  console.log("NewsPage data:", newsHeaderData);
 
   return (
     <div className="px-container min-h-screen pt-32 flex flex-col xl:flex-row justify-center items-center">

@@ -28,21 +28,32 @@ const socialIcons = [
   },
 ];
 
-const TeamCard = ({ src, name, post }) => {
+const TeamCard = ({ data }) => {
+  //const teamCard = data?.data?.teamMembers?.data[0]?.attributes?.team;
+  // console.log("TeamCard data:", teamCard);
+  // console.log("TeamCard:", data);
+  // console.log("TeamCardImg:", data?.image?.data?.attributes?.url);
+  // console.log("Icons:", data?.icons?.data);
   return (
     <div>
       <div className="flex flex-col gap-3 shadow-lg">
         <div>
-          <img className="aspect-auto " src={src} />
+          <img className="" src={data?.image?.data?.attributes?.url} />
         </div>
         <div className="content flex flex-col gap-4 px-4 py-8">
           <div>
-            <h4 className="xl:text-xxl">{name}</h4>
-            <p className="text-dimGray">{post}</p>
+            <h4 className="xl:text-xxl">{data?.name}</h4>
+            <p className="text-dimGray">{data?.role}</p>
           </div>
           <div className="icons flex cursor-pointer gap-4">
-            {socialIcons.map((item) => (
-              <img className="w-5" key={item.id} {...item} />
+            {data?.icons?.data.map((item) => (
+              <img
+                className="w-5"
+                src={item?.attributes?.url}
+                alt={item?.attributes?.alternativeText}
+                key={item.id}
+                {...item}
+              />
             ))}
           </div>
         </div>

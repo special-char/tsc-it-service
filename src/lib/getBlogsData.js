@@ -1,5 +1,5 @@
 
-export const getTeamMembersData = async () => {
+export const getBlogsData = async () => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/graphql`, {
       method: 'POST',
       headers: {
@@ -8,35 +8,22 @@ export const getTeamMembersData = async () => {
       },
       body: JSON.stringify({
         query: `{
-          teamMembers{
-            data{
-              id
-              attributes{
-                team{
-                  name
-                  role
-                  image{
-                    data{
-                      attributes{
+            blogs {
+              data {
+                attributes {
+                  title
+                  readTime
+                  bannerImage {
+                    data {
+                      attributes {
                         url
-                        alternativeText
-                      }
-                    }
-                  }
-                  icons{
-                    data{
-                      attributes{
-                        url
-                        name
-                        alternativeText
                       }
                     }
                   }
                 }
               }
             }
-          }
-        }`,
+          }`,
       }),
       
       cache: 'no-cache',

@@ -52,6 +52,10 @@ module.exports = {
           calc((100vw - calc(550px - 1rem * 2)) / 2)
         )`,
       },
+      transitionProperty: {
+        'height': 'height',
+        'spacing': 'margin, padding',
+      }
     },
   },
   plugins: [require("@tailwindcss/line-clamp")],
