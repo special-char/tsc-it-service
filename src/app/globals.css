@@ -44,3 +44,20 @@
     @apply  text-dimGray py-4 px-6 rounded-md border-2 bg-gainsboro border-gainsboro hover:bg-slateBlue hover:border-slateBlue hover:text-white duration-[0.4s] ease-in-out;
   }
 }
+
+@keyframes planeMove {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100px);
+  }
+}
+
+.svg {
+  will-change: transform;
+  animation-timing-function: ease-in;
+  animation-name: planeMove;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;     
+}

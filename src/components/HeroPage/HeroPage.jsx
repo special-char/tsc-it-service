@@ -1,11 +1,13 @@
 import React from "react";
+import Rocket from '/public/icons/rocket.svg'
+
 
 const HeroPage = (data) => {
   const homeHeaderData = data?.data?.data?.homeHeader?.data;
   // console.log(homeHeaderData?.attributes?.homeHeader?.button?.url);
 
   return (
-    <div className="px-container flex flex-col xl:flex-row gap-16 min-h-screen pt-32">
+    <div className="px-container flex flex-col xl:flex-row gap-16 min-h-screen pt-32 relative">
       <div className="flex flex-col items-start justify-center">
         <h2 className="text-9xl font-sans lg:text-[110px] 2xl:text-[140px]">
           {homeHeaderData?.attributes?.homeHeader?.heading1}
@@ -28,6 +30,7 @@ const HeroPage = (data) => {
         >
           {homeHeaderData?.attributes?.homeHeader?.button?.btnTxt}
         </button>
+      <Rocket className="svg w-28 h-16 absolute right-0 lg:top-56 xl:top-[405px] hidden md:block"/>
       </div>
     </div>
   );

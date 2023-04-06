@@ -1,4 +1,5 @@
 import React from "react";
+import Rocket from '/public/icons/rocket.svg'
 
 const NewsPage = (data) => {
   const newsHeaderData = data?.data?.data?.newsHeader?.data;
@@ -13,7 +14,7 @@ const NewsPage = (data) => {
           {newsHeaderData?.attributes?.NewsHeader?.heading2}
         </h1>
       </div>
-      <div className="left_content flex-1 -mt-10 flex flex-col gap-7">
+      <div className="left_content flex-1 -mt-10 flex flex-col gap-7 relative">
         <p className="text-dimGray text-xxl">
           {newsHeaderData?.attributes?.NewsHeader?.description}
         </p>
@@ -25,6 +26,7 @@ const NewsPage = (data) => {
             {newsHeaderData?.attributes?.NewsHeader?.button?.btnTxt}
           </button>
         </div>
+        <Rocket className="svg w-28 h-16 absolute right-0 lg:bottom-24 xl:bottom-0 hidden md:block"/>
       </div>
     </div>
   );
