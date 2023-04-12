@@ -5,7 +5,7 @@ const About = (data) => {
   const aboutData = data?.data?.data?.about?.data;
 
   return (
-    <div className="px-container min-h-screen flex flex-col lg:flex-row items-center justify-between gap-20 pt-32">
+    <div className="px-container min-h-screen flex flex-col xl:flex-row items-center justify-between gap-20 pt-32">
       <div className="flex-1 lg:aspect-square  relative w-full">
         <Image
           className=""
