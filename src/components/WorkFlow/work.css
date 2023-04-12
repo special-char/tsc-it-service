@@ -1,0 +1,28 @@
+
+
+  .carousel {
+    @apply py-10 px-4 !h-full;
+    &--sticky {
+      @apply w-full overflow-hidden sticky top-[50px] lg:pl-20;
+    }
+    &--wrapper {
+      @apply relative grid lg:flex lg:gap-4 md:grid-cols-2 py-8 w-full hover:gap-7;
+    }
+    &__card {
+      @apply flex-shrink-0  aspect-square relative lg:w-[550px] lg:h-[550px] lg:gap-4  hover:cursor-pointer;
+  
+      &__image {
+        @apply hover:scale-110 transition-all duration-700;
+      }
+  
+      &__chipset {
+        @apply absolute bottom-4  text-center flex  content-center flex-col lg:flex-row left-1/2  lg:w-[550px] -translate-x-1/2 lg:first-letter:translate-x-0
+        justify-items-center items-center justify-between lg:px-8;
+  
+        & h3,
+        p {
+          @apply  m-0;
+        }
+      }
+    }
+  }

@@ -66,7 +66,7 @@ const HeaderPage = ({ data, socialMedia }) => {
 
   return (
     <>
-      <header className="px-container flex fixed w-full items-center justify-between z-50 bg-white py-5">
+      <header className="px-container flex sticky top-0 w-screen items-center justify-between z-50 bg-white py-5">
         <h1 className="text-7xl cursor-pointer">
           {" "}
           <a href="#"> {headerPage?.title}</a>

@@ -8,6 +8,9 @@ import FunFacts from "@/containers/funFacts/FunFacts";
 import Carousel from "@/components/Carousel/Carousel";
 import PageHeader from "@/containers/pageHeader/PageHeader";
 import WorkFlow from "@/components/WorkFlow/WorkFlow";
+import WorkFlowCard from "@/components/WorkFlowCard/workFlowCard";
+import ImageGallery from "@/components/WorkFlowCard/workFlowCard";
+import PhotoGallery from "@/components/WorkFlowCard/workFlowCard";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,6 +18,9 @@ export default function Home() {
   return (
     <>
       <Hero />
+      {/* <WorkFlowCard /> */}
+      {/* <WorkFlow /> */}
+      <PhotoGallery />
       <PageHeader />
       <Banner />
       <Services />
