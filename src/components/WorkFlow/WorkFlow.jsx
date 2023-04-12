@@ -23,8 +23,9 @@ const WorkFlow = () => {
       document.querySelector(".carousel").style.width = "300";
 
 
-      
+
     }
+    //Scroll
     window.onscroll = function () {
       let scrollTop = window.pageYOffset;
 
@@ -37,7 +38,7 @@ const WorkFlow = () => {
           ".carousel--wrapper"
         ).style.transform = `translateX(-${scrollTop - distFromTop}px)`;
           "position:sticky !important;top:10 !important";
-      }
+      };
     };
   }, []);
 
