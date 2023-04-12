@@ -21,6 +21,9 @@ const WorkFlow = () => {
     if (windowWidth > 425) {
       document.querySelector(".carousel").style.height = "100";
       document.querySelector(".carousel").style.width = "300";
+
+
+      
     }
     window.onscroll = function () {
       let scrollTop = window.pageYOffset;
